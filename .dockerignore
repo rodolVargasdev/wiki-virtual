@@ -1,0 +1,22 @@
+# Ignorar archivos innecesarios para Docker
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+.venv/
+.env
+.env.local
+.env.production
+.git/
+.gitignore
+README.md
+tests/
+docs/
+*.log
+.DS_Store
+Thumbs.db
+config/env-vars.yaml
+firebase-key.json

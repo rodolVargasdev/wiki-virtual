@@ -1,0 +1,25 @@
+# Ejemplo de variables de entorno para Wiki Virtual
+# IMPORTANTE: Este archivo NO debe contener credenciales reales
+# Copia este archivo y configura tus valores reales
+
+FIREBASE_PROJECT_ID: tu-proyecto-firebase
+GEMINI_API_KEY: tu-api-key-gemini-aqui
+ALLOWED_DOMAINS: tu-dominio.com,tu-empresa.com
+ALLOWED_EMAILS: admin@tu-dominio.com,test@tu-dominio.com
+ENVIRONMENT: production
+FIREBASE_SERVICE_ACCOUNT_JSON: |
+  {
+    "type": "service_account",
+    "project_id": "tu-proyecto",
+    "private_key_id": "REDACTED",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nREDACTED\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-xxxxx@tu-proyecto.iam.gserviceaccount.com",
+    "client_id": "REDACTED",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "REDACTED",
+    "universe_domain": "googleapis.com"
+  }
+
+
