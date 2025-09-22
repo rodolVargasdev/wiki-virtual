@@ -13,8 +13,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copiar código fuente
 COPY src/ ./src/
 
-# Agregar src al PYTHONPATH
+# Agregar src al PYTHONPATH y cambiar al directorio src
 ENV PYTHONPATH=/app/src
+WORKDIR /app/src
 
 # Exponer puerto
 EXPOSE 8080
