@@ -1,11 +1,17 @@
-from services.embeddings import embedding_manager
+import os
+import sys
 from dotenv import load_dotenv
 from fastapi import APIRouter, Depends, HTTPException, Query
 from typing import List, Optional
+from datetime import datetime
+
+# Agregar el directorio padre al path para importaciones
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from services.embeddings import embedding_manager
 from models.models import ArticleCreate, ArticleUpdate, ArticleResponse, ArticleListResponse
 from utils.firestore_utils import FirestoreManager
 from core.auth import verify_token, require_role
-from datetime import datetime
 
 # Router para artículos
 router = APIRouter(prefix="/articles", tags=["articles"])
