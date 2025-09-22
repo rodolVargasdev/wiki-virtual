@@ -10,12 +10,8 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copiar código fuente
-COPY src/ ./src/
-
-# Cambiar al directorio src y configurar PYTHONPATH
-WORKDIR /app/src
-ENV PYTHONPATH=/app/src
+# Copiar código fuente directamente al directorio raíz
+COPY src/ ./
 
 # Exponer puerto
 EXPOSE 8080
