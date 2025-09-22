@@ -13,12 +13,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copiar código fuente
 COPY src/ ./src/
 
-# Agregar src al PYTHONPATH y cambiar al directorio src
-ENV PYTHONPATH=/app/src
+# Cambiar al directorio src y configurar PYTHONPATH
 WORKDIR /app/src
+ENV PYTHONPATH=/app/src
 
 # Exponer puerto
 EXPOSE 8080
 
-# Comando de inicio robusto
-CMD ["python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080", "--workers", "1"]
+# Comando de inicio simple
+CMD ["python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
