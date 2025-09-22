@@ -1,11 +1,6 @@
 import os
-import sys
 from fastapi import FastAPI, Depends
 import firebase_admin
-
-# Agregar el directorio actual al path para importaciones
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
 from core.auth import verify_token, require_role
 from api.articles import router as articles_router
 from api.chat import router as chat_router

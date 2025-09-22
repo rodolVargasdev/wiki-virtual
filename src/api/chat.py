@@ -1,12 +1,6 @@
-import os
-import sys
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 from typing import List, Dict, Optional
-
-# Agregar el directorio padre al path para importaciones
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 from core.auth import verify_token
 from services.embeddings import embedding_manager
 from services.gemini_service import gemini_service
